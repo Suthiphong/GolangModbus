@@ -25,7 +25,7 @@ func main() {
 
 	client := modbus.NewClient(handler)
 	for {
-		results, err := client.ReadDiscreteInputs(0, 10)
+		results, err := client.ReadHoldingRegisters(0, 10)
 		if err != nil {
 			fmt.Println(err)
 		}
